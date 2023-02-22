@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Importing Screens
+import HomeScreen from './Screens/HomeScreen';
+import ContactScreen from './Screens/ContactScreen';
+import AboutScreen from './Screens/AboutScreen';
+import ForgetPasswordScreen from './Screens/ForgetPasswordScreen';
 
 function App() {
+
+  // App Link
+  const appLink = "https://play.google.com/store/apps/details?id=com.askstudios.managerly"
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomeScreen appLink={appLink} />} />
+        <Route path="/contact-us" element={<ContactScreen appLink={appLink} />} />
+        <Route path="/about-us" element={<AboutScreen appLink={appLink} />} />
+        <Route path="/reset-password" element={<ForgetPasswordScreen appLink={appLink} />} />
+      </Routes>
+    </Router>
+
   );
 }
 
