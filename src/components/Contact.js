@@ -12,7 +12,7 @@ const Contact = () => {
                     <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Have questions or need assistance? Contact us today and our friendly team will be happy to help.</p>
                 </div>
                 <div class="lg:w-1/2 md:w-2/3 mx-auto">
-                    <form method='POST' name='contact' >
+                    <form name='contact' >
                         <div class="flex flex-wrap -m-2">
                             <div class="p-2 w-1/2">
                                 <div class="relative">
